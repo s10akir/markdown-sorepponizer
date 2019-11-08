@@ -1,15 +1,19 @@
 <template>
-  <div class="home">
-    <h1>Markdown Sorepponizer</h1>
-    <p>{{ message }}</p>
+  <v-container pa-0>
+    <v-container class="text-center">
+      <h1>Markdown Sorepponizer</h1>
+      <p>{{ message }}</p>
+    </v-container>
 
-    <div id="editor" class="col text_left">
-      <CodeMirror v-model="text" width="600px" :options="cmOption" />
-    </div>
-    <div id="preview" class="col text_left">
-      <textarea v-model="text" readonly />
-    </div>
-  </div>
+    <v-row>
+      <v-col cols="12" sm="6" id="editor" class="col text_left">
+        <CodeMirror v-model="text" width="600px" :options="cmOption" />
+      </v-col>
+      <v-col cols="12" sm="6" id="preview" class="col text_left">
+        <textarea v-model="text" readonly />
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
